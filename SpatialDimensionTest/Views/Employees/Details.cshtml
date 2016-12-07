@@ -1,0 +1,37 @@
+﻿    @model SpatialDimensionTest.Models.Employee
+    
+    @{
+        ViewBag.Title = "Details";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2 align="center">Employee Details</h2>
+
+    <div margin:auto>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.EmpName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EmpName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Job)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Job)
+            </dd>
+            
+
+        </dl>
+    </div>
+
+    <p align="center"> @Html.ActionLink("View Relationships", "Relationships", new { id = Model.EmpID }) 
+        <br />
+    </p>
+
+        <div align="right">@Html.ActionLink("Return to Employee Index", "Index")</div>

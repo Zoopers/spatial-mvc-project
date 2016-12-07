@@ -1,0 +1,41 @@
+﻿@model IEnumerable<SpatialDimensionTest.Models.Employee>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div align="center"><h1>Subordinates</h1></div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Job)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Job)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+<div align="right">@Html.ActionLink("Return to Employee List", "Index")</div>

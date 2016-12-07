@@ -1,0 +1,33 @@
+﻿    @{
+        ViewBag.Title = "Spatial Dimension Employee Portal";
+    }
+
+<div align="center">
+    <div style="height: 80px">
+        <h2>Spatial Dimension Employee Portal</h2>
+    </div>
+</div>
+
+
+@if (Session["LoginName"] != null) {
+    <div align="right" style="border-bottom:solid"  >
+        <div style="height:auto">
+
+    <h4>Welcome @Session["LoginName"].ToString()</h4>
+            </div>
+</div>
+}
+
+<div style="height:auto">
+    <div align="center">
+            <br />
+            <br />
+        <h4>@Html.ActionLink("Go to Employee Index", "Index", "Employees")</h4>
+            <br />
+            <br />
+            <img src="@Url.Content("~/Content/Image/SpatialNew.png")" alt="IMAGES" />
+    </div>
+
+
+</div>
+
